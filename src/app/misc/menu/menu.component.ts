@@ -8,7 +8,12 @@ import { Menu } from '../menu.class';
 })
 export class MenuComponent implements OnInit {
 
-  menus: Menu[] = [];
+  menus: Menu[] = [
+    new Menu("Home", "/home"),
+    new Menu("Users", "/users"),
+    new Menu("Activities", "/activities"),
+    new Menu("Login", "/users/login")
+  ];
   constructor() { }
 
   ngOnInit(): void {

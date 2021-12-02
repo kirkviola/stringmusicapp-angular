@@ -1,0 +1,21 @@
+
+
+button {
+    margin: 5 px;
+}
+
+div {
+
+    margin-top: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: solid black;
+    vertical-align: center;
+    text-align: center;
+    
+}
+label {
+    margin-left: 300px;
+}

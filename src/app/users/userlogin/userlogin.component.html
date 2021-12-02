@@ -1,1 +1,12 @@
-<p>userlogin works!</p>
+<div>
+    <h1>PRS Login</h1>
+    <span>User Name: </span>
+    <input [(ngModel)]="this.username" type="text" size="30">
+    <p></p>
+    <span>Password:  </span>
+    <input [(ngModel)]="this.password" type="password" size="30">
+    <p></p>
+    <button (click)="login()" class="btn btn-success">Login</button>
+</div>
+
+<label *ngIf="error">Invalid user name/password combination</label>

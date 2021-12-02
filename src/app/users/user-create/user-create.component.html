@@ -1,0 +1,62 @@
+<app-menu></app-menu>
+<div>
+    <span>Create User</span>
+    <span> | </span>
+    <a routerLink="/users">Go Back</a>
+</div>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>
+            <input type="text" size="10" value=0 disabled>
+        </td>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td>
+            <input type="text" size="20" [(ngModel)]="user.username">
+        </td>
+
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>
+            <input type="text" size="20" [(ngModel)]="user.password">
+        </td>
+        <td>
+            <input id="pass2" type="text" size="20" [(ngModel)]="pass">
+        </td>
+
+    </tr>
+    <tr>
+        <td>First Name</td>
+        <td>
+            <input type="text" size="20" [(ngModel)]="user.firstname" >
+        </td>
+
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>
+            <input type="text" size="20" [(ngModel)]="user.lastname">
+        </td>
+
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>
+            <input type="text" size="30" [(ngModel)]="user.email">
+        </td>
+
+    </tr>
+    <tr>
+        <td>Admin</td>
+        <td>
+            <input type="checkbox" [(ngModel)]="user.isAdmin">
+        </td>
+
+    </tr>
+    
+</table>
+<button (click)="create()" class="btn btn-primary">Create</button>
+<label *ngIf="badPass">Passwords do not match!</label>

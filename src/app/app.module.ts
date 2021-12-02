@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserlistComponent } from './users/userlist/userlist.component';
@@ -11,6 +12,7 @@ import { MenuComponent } from './misc/menu/menu.component';
 import { MenuItemComponent } from './misc/menu-item/menu-item.component';
 import { E404Component } from './misc/e404/e404.component';
 import { HomeComponent } from './misc/home/home.component';
+import { UserCreateComponent } from './users/user-create/user-create.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { HomeComponent } from './misc/home/home.component';
     UserloginComponent,
     MenuComponent,
     MenuItemComponent,
-    FormsModule,
-    HttpClientModule,
+    
     E404Component,
-    HomeComponent
+    HomeComponent,
+    UserCreateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
