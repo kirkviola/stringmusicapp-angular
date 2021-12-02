@@ -13,6 +13,9 @@ import { MenuItemComponent } from './misc/menu-item/menu-item.component';
 import { E404Component } from './misc/e404/e404.component';
 import { HomeComponent } from './misc/home/home.component';
 import { UserCreateComponent } from './users/user-create/user-create.component';
+import { MyUserComponent } from './users/my-user/my-user.component';
+import { ActivitiesListComponent } from './activities/activities-list/activities-list.component';
+import { ActivitiesCreateComponent } from './activities/activities-create/activities-create.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { UserCreateComponent } from './users/user-create/user-create.component';
     
     E404Component,
     HomeComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    MyUserComponent,
+    ActivitiesListComponent,
+    ActivitiesCreateComponent
   ],
   imports: [
     BrowserModule,

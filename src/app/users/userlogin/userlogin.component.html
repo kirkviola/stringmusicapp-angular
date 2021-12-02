@@ -1,5 +1,5 @@
-<div>
-    <h1>PRS Login</h1>
+<div id="login">
+    <h1>String Music App Login</h1>
     <span>User Name: </span>
     <input [(ngModel)]="this.username" type="text" size="30">
     <p></p>
@@ -9,4 +9,8 @@
     <button (click)="login()" class="btn btn-success">Login</button>
 </div>
 
-<label *ngIf="error">Invalid user name/password combination</label>
+<label id="error" *ngIf="error">Invalid user name/password combination</label>
+<div id="create">
+    <label >Don't have an account? Create one &nbsp;</label>
+    <a routerLink="/users/create">here</a>
+</div>

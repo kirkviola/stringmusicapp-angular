@@ -12,7 +12,8 @@ export class MenuComponent implements OnInit {
     new Menu("Home", "/home"),
     new Menu("Users", "/users"),
     new Menu("Activities", "/activities"),
-    new Menu("Login", "/users/login")
+    new Menu("Login", "/users/login"),
+    new Menu("My Activities", "/users/myuser/:id")
   ];
   constructor() { }
 
