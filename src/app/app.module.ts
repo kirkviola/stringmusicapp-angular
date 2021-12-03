@@ -16,6 +16,8 @@ import { UserCreateComponent } from './users/user-create/user-create.component';
 import { MyUserComponent } from './users/my-user/my-user.component';
 import { ActivitiesListComponent } from './activities/activities-list/activities-list.component';
 import { ActivitiesCreateComponent } from './activities/activities-create/activities-create.component';
+import { ProblemComponent } from './activities/problem/problem.component';
+import { UserActivityDetailComponent } from './users/user-activity-detail/user-activity-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ActivitiesCreateComponent } from './activities/activities-create/activi
     UserCreateComponent,
     MyUserComponent,
     ActivitiesListComponent,
-    ActivitiesCreateComponent
+    ActivitiesCreateComponent,
+    ProblemComponent,
+    UserActivityDetailComponent,
   ],
   imports: [
     BrowserModule,
