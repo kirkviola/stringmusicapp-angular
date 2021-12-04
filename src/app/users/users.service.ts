@@ -8,7 +8,7 @@ import { User } from './user.class';
 })
 export class UsersService {
 
-  baseurl: string = "http://localhost:28355";
+  baseurl: string = "http://localhost:5127/api/users";
 
   constructor(
     private httpSvc: HttpClient
@@ -23,7 +23,7 @@ export class UsersService {
   }
 
   login(username: string, password: string): Observable<User>{
-    return this.httpSvc.get(`${this.baseurl}/${username}${password}`) as Observable<User>;
+    return this.httpSvc.get(`${this.baseurl}/${username}/${password}`) as Observable<User>;
   }
 
   create(user: User): Observable<User> {
