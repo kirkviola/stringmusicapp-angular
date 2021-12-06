@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div>
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td >
+                <input type="text" size="30" [(ngModel)]="user.username">
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td >
+                <input type="text" size="30" [(ngModel)]="user.password">
+            </td>
+        </tr>
+        <tr>
+            <td>First Name:</td>
+            <td >
+                <input type="text" size="30" [(ngModel)]="user.firstname">
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td >
+                <input type="text" size="30" [(ngModel)]="user.lastname">
+            </td>
+        </tr>
+        <tr>
+            <td>Email Address:</td>
+            <td >
+                <input type="text" size="30" [(ngModel)]="user.email">
+            </td>
+        </tr>
+    </table>
+    <button class="btn btn-primary" (click)="save()">Save</button>
+</div>

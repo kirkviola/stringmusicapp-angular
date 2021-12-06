@@ -24,6 +24,14 @@ export class ActivitiesCreateComponent implements OnInit {
     private actSvc: ActivitiesService) { }
 
  
+  create(): void {
+    this.actSvc.generateActivity(this.activityId, this.size, this.activity, this.name).subscribe({
+      next: res => {
+        console.debug(res, "activity created!");
+        this.router.navigate(['/users/myuser']);
+      }, error: err => {console.error(err);}
+    });
+  }
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();

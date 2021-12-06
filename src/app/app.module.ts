@@ -18,6 +18,10 @@ import { ActivitiesListComponent } from './activities/activities-list/activities
 import { ActivitiesCreateComponent } from './activities/activities-create/activities-create.component';
 import { ProblemComponent } from './activities/problem/problem.component';
 import { UserActivityDetailComponent } from './users/user-activity-detail/user-activity-detail.component';
+import { ModelsListComponent } from './problem-models/models-list/models-list.component';
+import { ModelsEditComponent } from './problem-models/models-edit/models-edit.component';
+import { ModelsCreateComponent } from './problem-models/models-create/models-create.component';
+import { UserEditComponent } from './users/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { UserActivityDetailComponent } from './users/user-activity-detail/user-a
     ActivitiesCreateComponent,
     ProblemComponent,
     UserActivityDetailComponent,
+    ModelsListComponent,
+    ModelsEditComponent,
+    ModelsCreateComponent,
+    UserEditComponent,
   ],
   imports: [
     BrowserModule,

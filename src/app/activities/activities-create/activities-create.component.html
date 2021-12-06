@@ -21,10 +21,10 @@
         <tr>
             <td>Number of problems:</td>
             <td>
-                <input type="number" min="1" max="20">
+                <input [(ngModel)]="size" type="number" min="1" max="20">
             </td>
         </tr>
         
     </table>
-    <button class="btn btn-success">Create</button>
+    <button (click)="create()" class="btn btn-success">Create</button>
 </div>

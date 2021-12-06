@@ -16,12 +16,15 @@ export class MenuComponent implements OnInit {
     new Menu("Home", "/home"),
     new Menu("Users", "/users"),
     new Menu("Activities", "/activities"),
-    new Menu("Login", "/users/login"),
-    new Menu("My Activities", "/users/myuser/")
+    new Menu("My Account", "/users/edit"),
+    new Menu("My Activities", "/users/myuser/"),
+    new Menu("Problem Models", "/problemmodels"),
+    new Menu("Login", "/users/login")
   ];
 
   userMenu: Menu[] = [
     new Menu("Home", "/home"),
+    new Menu("My Account", "/users/edit"),
     new Menu("My Activities", "/users/myuser"),
     new Menu("Login", "/users/login")
   ];

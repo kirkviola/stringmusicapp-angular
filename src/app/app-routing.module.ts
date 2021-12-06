@@ -5,9 +5,13 @@ import { ActivitiesListComponent } from './activities/activities-list/activities
 import { ActivityDetailComponent } from './activities/activity-detail/activity-detail.component';
 import { E404Component } from './misc/e404/e404.component';
 import { HomeComponent } from './misc/home/home.component';
+import { ModelsCreateComponent } from './problem-models/models-create/models-create.component';
+import { ModelsEditComponent } from './problem-models/models-edit/models-edit.component';
+import { ModelsListComponent } from './problem-models/models-list/models-list.component';
 import { MyUserComponent } from './users/my-user/my-user.component';
 import { UserActivityDetailComponent } from './users/user-activity-detail/user-activity-detail.component';
 import { UserCreateComponent } from './users/user-create/user-create.component';
+import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { UserlistComponent } from './users/userlist/userlist.component';
 import { UserloginComponent } from './users/userlogin/userlogin.component';
 
@@ -19,10 +23,15 @@ const routes: Routes = [
   {path: "users/login", component: UserloginComponent},
   {path: "users/myuser", component: MyUserComponent},
   {path: "users/activity/:id", component: UserActivityDetailComponent},
+  {path: "users/edit", component: UserEditComponent},
 
   {path: "activities", component: ActivitiesListComponent},
   {path: "activities/create", component: ActivitiesCreateComponent},
   {path: "activities/detail/:id", component: ActivityDetailComponent},
+
+  {path: "problemmodels", component: ModelsListComponent},
+  {path: "problemmodels/create", component: ModelsCreateComponent},
+  {path: "problemmodels/edit/:id", component: ModelsEditComponent},
 
   {path: "home", component: HomeComponent},
 
