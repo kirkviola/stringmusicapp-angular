@@ -1,3 +1,5 @@
+import { Activity } from "../activities/activity.class";
+
 export class User {
     id: number;
     username: string;
@@ -6,6 +8,8 @@ export class User {
     lastname: string;
     email: string;
     isAdmin: boolean;
+
+    activities!: Activity[];
 
     constructor(){
         this.id = 0;

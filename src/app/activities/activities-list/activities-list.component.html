@@ -1,2 +1,36 @@
 <app-menu></app-menu>
-<p>activities-list works!</p>
+<h1>Activities</h1>
+<div>
+    <h2>Types</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let type of activityTypes">
+            <td>{{type.id}}</td>
+            <td>{{type.name}}</td>
+            <td><button>Remove</button></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <h2>All Activities</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Score</th>
+            <th>User</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let activity of activities">
+            <td>{{activity.id}}</td>
+            <td>{{activity.title}}</td>
+            <td>{{activity.score}}</td>
+            <td>{{activity.user.username}}</td>
+            <td><button>Remove</button></td>
+        </tr>
+    </table>
+</div>

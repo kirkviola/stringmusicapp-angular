@@ -50,9 +50,9 @@
 
     </tr>
     <tr>
-        <td>Admin</td>
+        <td *ngIf="admin">Admin</td>
         <td>
-            <input type="checkbox" [(ngModel)]="user.isAdmin">
+            <input *ngIf="admin" type="checkbox" [(ngModel)]="user.isAdmin">
         </td>
 
     </tr>

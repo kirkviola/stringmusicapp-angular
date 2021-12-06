@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from 'src/app/system.service';
 import { User } from '../user.class';
 import { UsersService } from '../users.service';
 
@@ -13,7 +14,9 @@ export class UserCreateComponent implements OnInit {
   user: User = new User();
   pass: string = "";
   badPass: boolean = false;
-  constructor(private userSvc: UsersService, private router: Router) { }
+  admin: boolean = false;
+
+  constructor(private userSvc: UsersService, private router: Router, private sysSvc: SystemService) { }
 
   create(): void {
     if(this.pass !== this.user.password){
@@ -31,6 +34,9 @@ export class UserCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.sysSvc.user.isAdmin){
+      this.admin = true;
+    }
   }
 
 }

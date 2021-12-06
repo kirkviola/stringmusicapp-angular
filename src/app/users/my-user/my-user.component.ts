@@ -15,6 +15,7 @@ export class MyUserComponent implements OnInit {
   constructor(private sysSvc: SystemService, private userSvc: UsersService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn();
     this.user = this.sysSvc.user;
   }
 

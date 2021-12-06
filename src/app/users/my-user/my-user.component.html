@@ -1,5 +1,21 @@
 <app-menu></app-menu>
 <a routerLink="/activities/create">Start a new activity</a>
 <div>
-    <h2>{{user.username}} Completed Activities</h2>
+    <h2>{{user.firstname}} Completed Activities</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Activity Title</th>
+            <th>Points Earned</th>
+            <th>Points Possible</th>
+            <th>Score</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let activity of user.activities">
+            <td>{{activity.title}}</td>
+            <td>{{activity.pointsEarned}}</td>
+            <td>{{activity.pointsPossible}}</td>
+            <td>{{activity.score}}</td>
+            <td><a routerLink="/users/activities/{{activity.id}}">Details</a></td>
+        </tr>
+    </table>
 </div>

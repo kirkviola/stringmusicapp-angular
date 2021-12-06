@@ -1,2 +1,20 @@
 <app-menu></app-menu>
-<p>userlist works!</p>
+<h1>Users</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Adm</th>
+        <th>Actions</th>
+    </tr>
+    <tr  *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.firstname}} {{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.isAdmin}}</td>
+        <td><a >details</a> | <a>edit</a></td>
+    </tr>
+</table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from 'src/app/system.service';
 
 @Component({
   selector: 'app-user-activity-detail',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserActivityDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sysSvc: SystemService) { }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn();
   }
 
 }

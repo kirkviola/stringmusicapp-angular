@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SystemService } from 'src/app/system.service';
 
 @Component({
   selector: 'app-activity-detail',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sysSvc: SystemService, private router: Router) { }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn();
   }
 
 }
