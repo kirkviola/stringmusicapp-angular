@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SystemService } from 'src/app/system.service';
 import { User } from 'src/app/users/user.class';
+import { ActivitiesService } from '../activities.service';
 import { ActivityType } from '../activity-type.class';
 import { ActivityTypesService } from '../activity-types.service';
 import { Activity } from '../activity.class';
@@ -12,16 +13,21 @@ import { Activity } from '../activity.class';
   styleUrls: ['./activities-create.component.css']
 })
 export class ActivitiesCreateComponent implements OnInit {
-  activity: Activity = new Activity();
+  name: string = "";
   size: number = 1;
-  user!: User
-  activityTypes: ActivityType[] = [];
+  activity: Activity = new Activity();
 
-  constructor(private sysSvc: SystemService, private router: Router, private aTypeSvc: ActivityTypesService) { }
+  activityTypes: ActivityType[] = [];
+  activityId: number = 0;
+
+  constructor(private sysSvc: SystemService, private router: Router, private aTypeSvc: ActivityTypesService,
+    private actSvc: ActivitiesService) { }
+
+ 
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
-    this.user = this.sysSvc.user;
+
     this.aTypeSvc.list().subscribe({
       next: res => {
         this.activityTypes = res;

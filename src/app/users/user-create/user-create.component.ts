@@ -14,11 +14,20 @@ export class UserCreateComponent implements OnInit {
   user: User = new User();
   pass: string = "";
   badPass: boolean = false;
+  missing: boolean = false;
   admin: boolean = false;
 
   constructor(private userSvc: UsersService, private router: Router, private sysSvc: SystemService) { }
 
   create(): void {
+    if(this.pass === "" ||
+      this.user.username === "" ||
+      this.user.firstname === "" ||
+      this.user.lastname === "" ||
+      this.user.email === ""){
+        this.missing = true;
+        return;
+      }
     if(this.pass !== this.user.password){
       this.badPass = true;
       this.user.password = "";

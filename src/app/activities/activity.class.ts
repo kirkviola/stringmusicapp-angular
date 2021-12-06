@@ -7,6 +7,8 @@ export class Activity {
     pointsPossible: number;
     score: number;
     userId: number;
+    isCompleted: boolean;
+    activityTypeId: number;
     user!: User;
 
     constructor(){
@@ -15,6 +17,8 @@ export class Activity {
         this.pointsEarned = 0;
         this.pointsPossible = 0;
         this.score = 0;
+        this.isCompleted = false;
+        this.activityTypeId = 0;
         this.userId = 0;
     }
 }
