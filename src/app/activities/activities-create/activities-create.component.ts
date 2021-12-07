@@ -25,7 +25,7 @@ export class ActivitiesCreateComponent implements OnInit {
 
  
   create(): void {
-    this.actSvc.generateActivity(this.activityId, this.size, this.activity, this.name).subscribe({
+    this.actSvc.generateActivity(this.activityId, this.size, this.activity).subscribe({
       next: res => {
         console.debug(res, "activity created!");
         this.router.navigate(['/users/myuser']);

@@ -23,14 +23,14 @@
             <th>Id</th>
             <th>Title</th>
             <th>Score</th>
-            <th>User</th>
+            <th>User Id</th>
             <th>Action</th>
         </tr>
         <tr *ngFor="let activity of activities">
             <td>{{activity.id}}</td>
             <td>{{activity.title}}</td>
             <td>{{activity.score}}</td>
-            <td>{{activity.user.username}}</td>
+            <td>{{activity.userId}}</td>
             <td><button>Remove</button></td>
         </tr>
     </table>

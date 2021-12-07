@@ -14,7 +14,7 @@
             <td>Activity Type:</td>
             <td>
                 <select [(ngModel)]="activityId">
-                    <option *ngFor="let activity of activityTypes" value="activity.id">{{activity.name}}</option>
+                    <option *ngFor="let activity of activityTypes" value="{{activity.id}}">{{activity.name}}</option>
                 </select>
             </td>
         </tr>
