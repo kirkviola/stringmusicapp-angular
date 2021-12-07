@@ -12,6 +12,7 @@ import { UsersService } from '../users.service';
 export class UserEditComponent implements OnInit {
 
   user: User = new User();
+  isAdmin: boolean = false;
   constructor(private sysSvc: SystemService, private userSvc: UsersService, private router: Router) { }
 
   save(): void {
@@ -25,6 +26,7 @@ export class UserEditComponent implements OnInit {
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
     this.user = this.sysSvc.user;
+    this.isAdmin = this.user.isAdmin;
   }
 
 }

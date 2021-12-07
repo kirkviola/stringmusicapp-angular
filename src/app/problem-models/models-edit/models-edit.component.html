@@ -4,7 +4,7 @@
     <tr>
         <td>Name</td>
         <td>
-            <input type="text" size="30" [(ngModel)]="model.id">
+            <input type="text" size="30" [(ngModel)]="model.name">
         </td>
     </tr>
     <tr>
@@ -40,4 +40,4 @@
 </table>
 <button class="btn btn-success" (click)="save()">Save</button>
 <button class="btn btn-danger" (click)="initDelete()">Delete</button>
-<button class="btn btn-danger" (click)="finalDelete()">Confirm Delete</button>
+<button *ngIf="confirmDelete" class="btn btn-danger" (click)="finalDelete()">Confirm Delete</button>

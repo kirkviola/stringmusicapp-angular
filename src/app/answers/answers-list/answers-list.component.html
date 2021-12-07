@@ -1,1 +1,15 @@
-<p>answers-list works!</p>
+<app-menu></app-menu>
+<h1>Answers</h1>
+<a routerLink="/answers/create">Create new answer</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Selection</th>
+        <th>Activity Type</th>
+    </tr>
+    <tr *ngFor="let answer of answers">
+        <td>{{answer.id}}</td>
+        <td>{{answer.selection}}</td>
+        <td>{{answer.activityType.name}}</td>
+    </tr>
+</table>

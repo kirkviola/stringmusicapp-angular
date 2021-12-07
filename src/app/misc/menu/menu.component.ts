@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
 
   userMenu: Menu[] = [
     new Menu("Home", "/home"),
-    new Menu("My Account", "/users/edit"),
+    new Menu("My Account", `/users/edit/${this.sysSvc.user.id}`),
     new Menu("My Activities", "/users/myuser"),
     new Menu("Login", "/users/login")
   ];

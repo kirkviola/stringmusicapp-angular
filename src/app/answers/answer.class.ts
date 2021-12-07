@@ -1,14 +1,16 @@
+import { ActivityType } from "../activities/activity-type.class";
+
 export class Answer {
     id: number;
-    option: string;
-    problemModelId: number;
-    activityId: number;
+    selection: string;
+    activityTypeId: number;
+
+    activityType!: ActivityType
 
     constructor() {
         this.id = 0;
-        this.option = "";
-        this.problemModelId = 0;
-        this.activityId = 0;
+        this.selection = "";
+        this.activityTypeId = 0;
 
     }
 }

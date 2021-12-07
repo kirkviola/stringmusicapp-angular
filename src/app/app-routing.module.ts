@@ -4,6 +4,7 @@ import { ActivitiesCreateComponent } from './activities/activities-create/activi
 import { ActivitiesListComponent } from './activities/activities-list/activities-list.component';
 import { ActivityDetailComponent } from './activities/activity-detail/activity-detail.component';
 import { ActivityTypeCreateComponent } from './activities/activity-type-create/activity-type-create.component';
+import { AnswerCreateComponent } from './answers/answer-create/answer-create.component';
 import { AnswerDetailComponent } from './answers/answer-detail/answer-detail.component';
 import { AnswerEditComponent } from './answers/answer-edit/answer-edit.component';
 import { AnswersListComponent } from './answers/answers-list/answers-list.component';
@@ -27,7 +28,7 @@ const routes: Routes = [
   {path: "users/login", component: UserloginComponent},
   {path: "users/myuser", component: MyUserComponent},
   {path: "users/activity/:id", component: UserActivityDetailComponent},
-  {path: "users/edit", component: UserEditComponent},
+  {path: "users/edit/:id", component: UserEditComponent},
 
   {path: "activities", component: ActivitiesListComponent},
   {path: "activities/create", component: ActivitiesCreateComponent},
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path: "answers", component: AnswersListComponent},
   {path: "answers/detail/:id", component: AnswerDetailComponent},
   {path: "answers/edit/:id", component: AnswerEditComponent},
+  {path: "answers/create", component: AnswerCreateComponent},
 
   {path: "home", component: HomeComponent},
 

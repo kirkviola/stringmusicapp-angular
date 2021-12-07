@@ -15,6 +15,6 @@
         <td>{{user.firstname}} {{user.lastname}}</td>
         <td>{{user.email}}</td>
         <td>{{user.isAdmin}}</td>
-        <td><a >details</a> | <a>edit</a></td>
+        <td><a >details</a> | <a routerLink="/users/edit/{{user.id}}">edit</a></td>
     </tr>
 </table>

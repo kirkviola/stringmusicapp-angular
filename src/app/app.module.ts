@@ -26,6 +26,9 @@ import { AnswersListComponent } from './answers/answers-list/answers-list.compon
 import { AnswerDetailComponent } from './answers/answer-detail/answer-detail.component';
 import { AnswerEditComponent } from './answers/answer-edit/answer-edit.component';
 import { ActivityTypeCreateComponent } from './activities/activity-type-create/activity-type-create.component';
+import { ActivityDetailComponent } from './activities/activity-detail/activity-detail.component';
+import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { AnswerCreateComponent } from './answers/answer-create/answer-create.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,9 @@ import { ActivityTypeCreateComponent } from './activities/activity-type-create/a
     AnswerDetailComponent,
     AnswerEditComponent,
     ActivityTypeCreateComponent,
+    ActivityDetailComponent,
+    UserDetailComponent,
+    AnswerCreateComponent
   ],
   imports: [
     BrowserModule,
