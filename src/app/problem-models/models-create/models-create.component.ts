@@ -12,6 +12,7 @@ export class ModelsCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
+    this.sysSvc.isAdmin();
   }
 
 }

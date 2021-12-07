@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActivitiesCreateComponent } from './activities/activities-create/activities-create.component';
 import { ActivitiesListComponent } from './activities/activities-list/activities-list.component';
 import { ActivityDetailComponent } from './activities/activity-detail/activity-detail.component';
+import { ActivityTypeCreateComponent } from './activities/activity-type-create/activity-type-create.component';
+import { AnswerDetailComponent } from './answers/answer-detail/answer-detail.component';
+import { AnswerEditComponent } from './answers/answer-edit/answer-edit.component';
+import { AnswersListComponent } from './answers/answers-list/answers-list.component';
 import { E404Component } from './misc/e404/e404.component';
 import { HomeComponent } from './misc/home/home.component';
 import { ModelsCreateComponent } from './problem-models/models-create/models-create.component';
@@ -28,10 +32,15 @@ const routes: Routes = [
   {path: "activities", component: ActivitiesListComponent},
   {path: "activities/create", component: ActivitiesCreateComponent},
   {path: "activities/detail/:id", component: ActivityDetailComponent},
+  {path: "activities/type/create", component: ActivityTypeCreateComponent},
 
   {path: "problemmodels", component: ModelsListComponent},
   {path: "problemmodels/create", component: ModelsCreateComponent},
   {path: "problemmodels/edit/:id", component: ModelsEditComponent},
+
+  {path: "answers", component: AnswersListComponent},
+  {path: "answers/detail/:id", component: AnswerDetailComponent},
+  {path: "answers/edit/:id", component: AnswerEditComponent},
 
   {path: "home", component: HomeComponent},
 

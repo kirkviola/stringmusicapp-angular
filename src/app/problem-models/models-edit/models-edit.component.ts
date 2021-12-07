@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SystemService } from 'src/app/system.service';
+import { ProblemModel } from '../problem-models.class';
+import { ProblemModelsService } from '../problem-models.service';
 
 @Component({
   selector: 'app-models-edit',
@@ -8,10 +11,45 @@ import { SystemService } from 'src/app/system.service';
 })
 export class ModelsEditComponent implements OnInit {
 
-  constructor(private sysSvc: SystemService) { }
+  model: ProblemModel = new ProblemModel();
+  modelNbr: number = 0;
+  confirmDelete: boolean = false;
+  constructor(private sysSvc: SystemService, private modelSvc: ProblemModelsService,
+    private route: ActivatedRoute, private router: Router) { }
+
+  save(): void {
+    this.modelSvc.update(this.model).subscribe({
+      next: res => {
+        console.debug(res, "model updated");
+        this.router.navigate(['problemmodels']);
+      }, error: err => {console.error(err);}
+    });
+  }
+
+  initDelete(): void {
+    this.confirmDelete = true;
+  }
+
+  finalDelete(): void {
+    this.modelSvc.remove(this.model.id).subscribe({
+      next: res => { console.debug(res, "model deleted");
+      this.router.navigate(['/problemmodels']);
+    }, error: err => {console.error(err);}
+    });
+  }
+
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
+    this.sysSvc.isAdmin();
+
+    this.modelNbr = +this.route.snapshot.params['id']
+    this.modelSvc.getById(this.modelNbr).subscribe({
+      next: res => {
+        this.model = res;
+        console.debug(res, "model found");
+      }, error: err => { console.error(err);}
+    });
   }
 
 }

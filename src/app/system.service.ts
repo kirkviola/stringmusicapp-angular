@@ -20,4 +20,11 @@ export class SystemService {
       return true;
     }
   }
+
+  isAdmin(): boolean {
+    if(!this.user.isAdmin){
+      this.router.navigate(['/home']);
+      return false;
+    } else { return true; }
+  }
 }

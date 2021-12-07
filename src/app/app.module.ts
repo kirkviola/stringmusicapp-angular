@@ -22,6 +22,10 @@ import { ModelsListComponent } from './problem-models/models-list/models-list.co
 import { ModelsEditComponent } from './problem-models/models-edit/models-edit.component';
 import { ModelsCreateComponent } from './problem-models/models-create/models-create.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { AnswersListComponent } from './answers/answers-list/answers-list.component';
+import { AnswerDetailComponent } from './answers/answer-detail/answer-detail.component';
+import { AnswerEditComponent } from './answers/answer-edit/answer-edit.component';
+import { ActivityTypeCreateComponent } from './activities/activity-type-create/activity-type-create.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,10 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
     ModelsEditComponent,
     ModelsCreateComponent,
     UserEditComponent,
+    AnswersListComponent,
+    AnswerDetailComponent,
+    AnswerEditComponent,
+    ActivityTypeCreateComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,21 @@
 <app-menu></app-menu>
-<p>models-list works!</p>
+<h1>Problem Models</h1>
+<a routerLink="/problemmodels/create">Create New Model</a>
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Correct Answer</th>
+            <th>Actvity Type</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let model of models">
+            <td>{{model.id}}</td>
+            <td>{{model.name}}</td>
+            <td>{{model.correctAnswer}}</td>
+            <td>{{model.activityType}}</td>
+            <td><a routerLink="/problemmodels/edit/{{model.id}}">Edit</a></td>
+        </tr>
+    </table>
+</div>

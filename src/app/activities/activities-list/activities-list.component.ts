@@ -19,6 +19,7 @@ export class ActivitiesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
+    this.sysSvc.isAdmin();
     this.aTypeSvc.list().subscribe({
       next: res => {
         this.activityTypes = res;

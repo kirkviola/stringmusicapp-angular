@@ -13,6 +13,7 @@ export class ActivityDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
+    this.sysSvc.isAdmin();
   }
 
 }

@@ -3,6 +3,7 @@ export class ProblemModel {
     name: string;
     correctAnswer: string;
     questionText: string;
+    pointsPossible: number;
     photoPath: string;
     activityType: string;
 
@@ -11,6 +12,7 @@ export class ProblemModel {
         this.name = "";
         this.correctAnswer = "";
         this.questionText = "";
+        this.pointsPossible = 0;
         this.photoPath = "";
         this.activityType = "";
     }

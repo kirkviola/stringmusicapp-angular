@@ -3,10 +3,11 @@ import { Activity } from "./activity.class";
 export class ActivityType {
     id: number;
     name: string;
-    activities!: Activity[];
+    activities: Activity[];
     
     constructor(){
         this.id = 0;
         this.name = "";
+        this.activities = [];
     }
 }
