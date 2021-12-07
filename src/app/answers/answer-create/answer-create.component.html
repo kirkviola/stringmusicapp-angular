@@ -7,8 +7,8 @@
     <tr>
         <td>Activity Type:</td>
         <select [(ngModel)]="answer.activityTypeId">
-            <option *ngFor="let type of activityTypes" value="type.id">{{type.name}}</option>
+            <option *ngFor="let type of activityTypes" value="{{type.id}}">{{type.name}}</option>
         </select>
     </tr>
 </table>
-<button class="btn btn-primary">Create</button>
+<button class="btn btn-primary" (click)="save()">Create</button>

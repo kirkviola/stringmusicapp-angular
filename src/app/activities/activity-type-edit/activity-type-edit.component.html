@@ -1,0 +1,12 @@
+<app-menu></app-menu>
+<span>Edit Type | </span>
+<a routerLink="/activities">Go back</a>
+<table>
+    <tr>
+        <td>Name:</td>
+        <td><input type="text" size="30" [(ngModel)]="type.name"></td>
+    </tr>
+</table>
+<button class="btn btn-success" (click)="save()">Save</button>
+<button class="btn btn-danger" (click)="initDelete()">Delete</button>
+<button class="btn btn-danger" *ngIf="initDel" (click)="finalDelete()">Confirm Delete</button>

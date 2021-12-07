@@ -12,7 +12,7 @@
         <tr *ngFor="let type of activityTypes">
             <td>{{type.id}}</td>
             <td>{{type.name}}</td>
-            <td><button>Remove</button></td>
+            <td><a routerLink="/activities/type/edit/{{type.id}}">Edit</a></td>
         </tr>
     </table>
 </div>

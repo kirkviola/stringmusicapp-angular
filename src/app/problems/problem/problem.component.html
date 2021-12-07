@@ -1,2 +1,9 @@
 <app-menu></app-menu>
-<p>problem works!</p>
+<h1>Question</h1>
+<h3>**Make sure NOT to click submit until ALL questions have been answered!</h3>
+
+<span>{{activity.problems[idx].questionText}}</span>
+<img src="{{activity.problems[idx].photoPath}}" alt="">
+<table><tr *ngFor="let answer of activity.activityType.answers">
+
+</tr></table>

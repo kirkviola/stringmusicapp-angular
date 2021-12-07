@@ -4,6 +4,7 @@ import { ActivitiesCreateComponent } from './activities/activities-create/activi
 import { ActivitiesListComponent } from './activities/activities-list/activities-list.component';
 import { ActivityDetailComponent } from './activities/activity-detail/activity-detail.component';
 import { ActivityTypeCreateComponent } from './activities/activity-type-create/activity-type-create.component';
+import { ActivityTypeEditComponent } from './activities/activity-type-edit/activity-type-edit.component';
 import { AnswerCreateComponent } from './answers/answer-create/answer-create.component';
 import { AnswerDetailComponent } from './answers/answer-detail/answer-detail.component';
 import { AnswerEditComponent } from './answers/answer-edit/answer-edit.component';
@@ -13,6 +14,7 @@ import { HomeComponent } from './misc/home/home.component';
 import { ModelsCreateComponent } from './problem-models/models-create/models-create.component';
 import { ModelsEditComponent } from './problem-models/models-edit/models-edit.component';
 import { ModelsListComponent } from './problem-models/models-list/models-list.component';
+import { ProblemComponent } from './problems/problem/problem.component';
 import { MyUserComponent } from './users/my-user/my-user.component';
 import { UserActivityDetailComponent } from './users/user-activity-detail/user-activity-detail.component';
 import { UserCreateComponent } from './users/user-create/user-create.component';
@@ -32,8 +34,10 @@ const routes: Routes = [
 
   {path: "activities", component: ActivitiesListComponent},
   {path: "activities/create", component: ActivitiesCreateComponent},
+  {path: "activities/type/edit/:id", component: ActivityTypeEditComponent},
   {path: "activities/detail/:id", component: ActivityDetailComponent},
   {path: "activities/type/create", component: ActivityTypeCreateComponent},
+  {path: "activities/problems/:id", component: ProblemComponent},
 
   {path: "problemmodels", component: ModelsListComponent},
   {path: "problemmodels/create", component: ModelsCreateComponent},

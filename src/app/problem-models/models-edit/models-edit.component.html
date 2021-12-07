@@ -34,7 +34,9 @@
     <tr>
         <td>Activity Type</td>
         <td>
-            <input type="text" size="30" [(ngModel)]="model.activityType">
+            <select [(ngModel)]="model.activityType">
+                <option *ngFor="let type of types" value="{{type.name}}">{{type.name}}</option>
+            </select>
         </td>
     </tr>
 </table>

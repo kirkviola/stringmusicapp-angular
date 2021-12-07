@@ -16,7 +16,7 @@ import { UserCreateComponent } from './users/user-create/user-create.component';
 import { MyUserComponent } from './users/my-user/my-user.component';
 import { ActivitiesListComponent } from './activities/activities-list/activities-list.component';
 import { ActivitiesCreateComponent } from './activities/activities-create/activities-create.component';
-import { ProblemComponent } from './activities/problem/problem.component';
+import { ProblemComponent } from './problems/problem/problem.component';
 import { UserActivityDetailComponent } from './users/user-activity-detail/user-activity-detail.component';
 import { ModelsListComponent } from './problem-models/models-list/models-list.component';
 import { ModelsEditComponent } from './problem-models/models-edit/models-edit.component';
@@ -29,6 +29,7 @@ import { ActivityTypeCreateComponent } from './activities/activity-type-create/a
 import { ActivityDetailComponent } from './activities/activity-detail/activity-detail.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
 import { AnswerCreateComponent } from './answers/answer-create/answer-create.component';
+import { ActivityTypeEditComponent } from './activities/activity-type-edit/activity-type-edit.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { AnswerCreateComponent } from './answers/answer-create/answer-create.com
     ActivityTypeCreateComponent,
     ActivityDetailComponent,
     UserDetailComponent,
-    AnswerCreateComponent
+    AnswerCreateComponent,
+    ActivityTypeEditComponent
   ],
   imports: [
     BrowserModule,

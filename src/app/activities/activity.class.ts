@@ -1,4 +1,6 @@
+import { Problem } from "../problems/problem.class";
 import { User } from "../users/user.class";
+import { ActivityType } from "./activity-type.class";
 
 export class Activity {
     id: Number;
@@ -9,7 +11,10 @@ export class Activity {
     userId: number;
     isCompleted: boolean;
     activityTypeId: number;
+    
+    activityType!: ActivityType
     user!: User;
+    problems!: Problem[];
 
     constructor(){
         this.id = 0;

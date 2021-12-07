@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ActivityType } from 'src/app/activities/activity-type.class';
+import { ActivityTypesService } from 'src/app/activities/activity-types.service';
 import { SystemService } from 'src/app/system.service';
 import { ProblemModel } from '../problem-models.class';
 import { ProblemModelsService } from '../problem-models.service';
@@ -14,8 +16,9 @@ export class ModelsEditComponent implements OnInit {
   model: ProblemModel = new ProblemModel();
   modelNbr: number = 0;
   confirmDelete: boolean = false;
+  types: ActivityType[] = [];
   constructor(private sysSvc: SystemService, private modelSvc: ProblemModelsService,
-    private route: ActivatedRoute, private router: Router) { }
+    private route: ActivatedRoute, private router: Router, private aTypeSvc: ActivityTypesService) { }
 
   save(): void {
     this.modelSvc.update(this.model).subscribe({
@@ -48,6 +51,13 @@ export class ModelsEditComponent implements OnInit {
       next: res => {
         this.model = res;
         console.debug(res, "model found");
+      }, error: err => { console.error(err);}
+    });
+
+    this.aTypeSvc.list().subscribe({
+      next: res => {
+        this.types = res;
+        console.debug(res, "types found");
       }, error: err => { console.error(err);}
     });
   }
