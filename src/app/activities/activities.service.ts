@@ -20,6 +20,10 @@ export class ActivitiesService {
     return this.httpSvc.get(`${this.baseurl}/${id}`) as Observable<Activity>;
   }
 
+  getUserActivities(id: number): Observable<Activity[]> {
+    return this.httpSvc.get(`${this.baseurl}/useractivities/${id}`) as Observable<Activity[]>;
+  }
+
   create(activity: Activity): Observable<Activity>{
     return this.httpSvc.post(`${this.baseurl}`, activity) as Observable<Activity>;
   }

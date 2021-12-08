@@ -20,6 +20,10 @@ export class AnswersService {
     return this.httpSvc.get(`${this.baseurl}/${id}`) as Observable<Answer>;
   }
 
+  getAnswersByType(id: number): Observable<Answer[]> {
+    return this.httpSvc.get(`${this.baseurl}/answers/${id}`) as Observable<Answer[]>;
+  }
+
   create(answer: Answer): Observable<Answer> {
     return this.httpSvc.post(this.baseurl, answer) as Observable<Answer>;
   }
