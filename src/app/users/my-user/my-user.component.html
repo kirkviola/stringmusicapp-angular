@@ -14,7 +14,7 @@
             <td>{{activity.title}}</td>
             <td>{{activity.pointsEarned}}</td>
             <td>{{activity.pointsPossible}}</td>
-            <td>{{activity.score}}</td>
+            <td>{{activity.score | percent}}</td>
             <td><a routerLink="/activities/problems/{{activity.id}}">Take</a></td>
         </tr>
     </table>
@@ -33,8 +33,8 @@
             <td>{{activity.title}}</td>
             <td>{{activity.pointsEarned}}</td>
             <td>{{activity.pointsPossible}}</td>
-            <td>{{activity.score}}</td>
-            <td><a routerLink="/users/activities/{{activity.id}}">Details</a></td>
+            <td>{{activity.score | percent}}</td>
+            <td><a routerLink="/users/activity/{{activity.id}}">Details</a></td>
         </tr>
     </table>
 </div>

@@ -21,8 +21,8 @@ export class MyUserComponent implements OnInit {
     private actSvc: ActivitiesService) { }
 
   sortActivities(): void {
-      for(let act of this.user.activities){
-        if(act.isCompleted){
+      for(let act of this.activities){
+        if(act.isComplete){
           this.complete.push(act);
         }
         else {

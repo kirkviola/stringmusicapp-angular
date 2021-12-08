@@ -28,7 +28,7 @@ export class ProblemsService {
   }
 
   check(problem: Problem): Observable<Problem> {
-    return this.httpSvc.put(`${this.baseurl}/check`, problem) as Observable<Problem>;
+    return this.httpSvc.put(`${this.baseurl}/check/${problem.id}`, problem) as Observable<Problem>;
   }
 
   remove(id: number): Observable<Problem> {

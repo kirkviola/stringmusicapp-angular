@@ -1,1 +1,19 @@
-<p>user-activity-detail works!</p>
+<app-menu></app-menu>
+<a routerLink="/users/myuser">Go back</a>
+<h1>{{activity.title}} Results:</h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>Question</th>
+        <th>Your Answer</th>
+        <th>Question</th>
+    </tr>
+    <tr *ngFor="let problem of activity.problems">
+        <td>
+            {{problem.questionText}}
+            <img src="{{problem.photoPath}}" alt="">
+        </td>
+        <td>{{problem.selectedAnswer}}</td>
+        <td>{{problem.correctAnswer}}</td>
+    </tr>
+</table>

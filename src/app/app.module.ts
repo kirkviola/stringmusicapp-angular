@@ -58,7 +58,7 @@ import { ActivityTypeEditComponent } from './activities/activity-type-edit/activ
     ActivityDetailComponent,
     UserDetailComponent,
     AnswerCreateComponent,
-    ActivityTypeEditComponent
+    ActivityTypeEditComponent,
   ],
   imports: [
     BrowserModule,

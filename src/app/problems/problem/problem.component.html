@@ -9,5 +9,7 @@
     <label>{{answer.selection}}</label></td>
 </tr>
 </table>
-<button (click)="previous()" class="btn btn-primary">Back</button>
-<button (click)="next()">Next</button>
+<button *ngIf="back" (click)="previous()" class="btn btn-primary">Back</button>
+<button *ngIf="forward" (click)="next()" class="btn btn-primary">Next</button>
+<button (click)="initialSubmit()" class="btn btn-success">Submit</button>
+<button *ngIf="initSubmit" (click)="finalSubmit()" class="btn btn-success">Confirm Submit</button>

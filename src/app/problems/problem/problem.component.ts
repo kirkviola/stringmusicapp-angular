@@ -21,6 +21,8 @@ export class ProblemComponent implements OnInit {
   back: boolean = false;
   forward: boolean = true;
   idx: number = 0;
+  initSubmit: boolean = false;
+
   constructor(private actSvc: ActivitiesService, private route: ActivatedRoute, private router: Router, private sysSvc: SystemService,
     private ansSvc: AnswersService, private problSvc: ProblemsService
    ) { }
@@ -54,6 +56,24 @@ export class ProblemComponent implements OnInit {
     })
   }
 
+  initialSubmit(): void {
+    this.initSubmit = true;
+  }
+
+  finalSubmit(): void {
+    this.problSvc.check(this.activity.problems[this.idx]).subscribe({
+      next: res => {
+        console.debug(res, "final score");
+        this.activity.isComplete = true;
+        this.actSvc.update(this.activity).subscribe({
+          next: res => {
+            console.debug(res, "submitted!");
+            this.router.navigate(["/users/myuser"]);
+          }, error: err => { console.error(err);}
+        });
+      }, error: err => { console.error(err);}
+    });
+  }
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
     this.sysSvc.isAdmin();
