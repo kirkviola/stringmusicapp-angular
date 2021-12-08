@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivityType } from 'src/app/activities/activity-type.class';
+import { ActivityTypesService } from 'src/app/activities/activity-types.service';
+import { SystemService } from 'src/app/system.service';
 import { Answer } from '../answer.class';
 import { AnswersService } from '../answers.service';
 
@@ -9,10 +12,14 @@ import { AnswersService } from '../answers.service';
 })
 export class AnswersListComponent implements OnInit {
 
+  activityTypes: ActivityType[] = [];
   answers: Answer[] = [];
-  constructor(private ansSvc: AnswersService) { }
+  constructor(private ansSvc: AnswersService, private sysSvc: SystemService) { }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn();
+    this.sysSvc.isAdmin();
+
     this.ansSvc.list().subscribe({
       next: res => {
         this.answers = res;

@@ -1,3 +1,5 @@
+import { ActivityType } from "../activities/activity-type.class";
+
 export class ProblemModel {
     id: number;
     name: string;
@@ -5,7 +7,7 @@ export class ProblemModel {
     questionText: string;
     pointsPossible: number;
     photoPath: string;
-    activityType: string;
+    activityType!: ActivityType;
 
     constructor() {
         this.id = 0;
@@ -14,6 +16,5 @@ export class ProblemModel {
         this.questionText = "";
         this.pointsPossible = 0;
         this.photoPath = "";
-        this.activityType = "";
     }
 }

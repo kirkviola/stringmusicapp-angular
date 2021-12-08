@@ -3,7 +3,7 @@ import { User } from "../users/user.class";
 import { ActivityType } from "./activity-type.class";
 
 export class Activity {
-    id: Number;
+    id: number;
     title: string;
     pointsEarned: number;
     pointsPossible: number;

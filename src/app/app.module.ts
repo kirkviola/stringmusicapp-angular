@@ -30,6 +30,7 @@ import { ActivityDetailComponent } from './activities/activity-detail/activity-d
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
 import { AnswerCreateComponent } from './answers/answer-create/answer-create.component';
 import { ActivityTypeEditComponent } from './activities/activity-type-edit/activity-type-edit.component';
+import { BoolPipePipe } from './bool-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ActivityTypeEditComponent } from './activities/activity-type-edit/activ
     UserDetailComponent,
     AnswerCreateComponent,
     ActivityTypeEditComponent,
+    BoolPipePipe,
   ],
   imports: [
     BrowserModule,

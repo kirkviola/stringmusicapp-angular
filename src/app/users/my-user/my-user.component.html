@@ -8,6 +8,7 @@
             <th>Points Earned</th>
             <th>Points Possible</th>
             <th>Score</th>
+            <th>Activity Type</th>
             <th>Actions</th>
         </tr>
         <tr *ngFor="let activity of inProgress">
@@ -15,6 +16,7 @@
             <td>{{activity.pointsEarned}}</td>
             <td>{{activity.pointsPossible}}</td>
             <td>{{activity.score | percent}}</td>
+            <td>{{activity.activityType.name}}</td>
             <td><a routerLink="/activities/problems/{{activity.id}}">Take</a></td>
         </tr>
     </table>
@@ -27,6 +29,7 @@
             <th>Points Earned</th>
             <th>Points Possible</th>
             <th>Score</th>
+            <th>Activity Type</th>
             <th>Actions</th>
         </tr>
         <tr *ngFor="let activity of complete">
@@ -34,6 +37,7 @@
             <td>{{activity.pointsEarned}}</td>
             <td>{{activity.pointsPossible}}</td>
             <td>{{activity.score | percent}}</td>
+            <td>{{activity.activityType.name}}</td>
             <td><a routerLink="/users/activity/{{activity.id}}">Details</a></td>
         </tr>
     </table>

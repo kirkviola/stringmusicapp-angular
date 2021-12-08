@@ -64,11 +64,16 @@ export class ProblemComponent implements OnInit {
     this.problSvc.check(this.activity.problems[this.idx]).subscribe({
       next: res => {
         console.debug(res, "final score");
-        this.activity.isComplete = true;
-        this.actSvc.update(this.activity).subscribe({
+        this.actSvc.getById(this.activity.id).subscribe({
           next: res => {
-            console.debug(res, "submitted!");
-            this.router.navigate(["/users/myuser"]);
+            this.activity = res;
+            this.activity.isComplete = true;
+            this.actSvc.update(this.activity).subscribe({
+              next: res => {
+                console.debug(res, "submitted!");
+                this.router.navigate(["/users/myuser"]);
+              }, error: err => { console.error(err);}
+            });
           }, error: err => { console.error(err);}
         });
       }, error: err => { console.error(err);}

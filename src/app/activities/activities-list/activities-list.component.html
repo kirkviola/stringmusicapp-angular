@@ -24,6 +24,7 @@
             <th>Title</th>
             <th>Score</th>
             <th>User Id</th>
+            <th>Completed</th>
             <th>Action</th>
         </tr>
         <tr *ngFor="let activity of activities">
@@ -31,7 +32,10 @@
             <td>{{activity.title}}</td>
             <td>{{activity.score}}</td>
             <td>{{activity.userId}}</td>
-            <td><button>Remove</button></td>
+            <td>{{activity.isComplete | boolPipe}}</td>
+            <td><button (click)="delete(activity.id)">Remove</button>
+                <button (click)="reset(activity)">Reset</button>
+            </td>
         </tr>
     </table>
 </div>
