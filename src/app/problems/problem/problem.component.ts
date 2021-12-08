@@ -81,7 +81,6 @@ export class ProblemComponent implements OnInit {
   }
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
-    this.sysSvc.isAdmin();
 
     this.actNbr = +this.route.snapshot.params['id'];
     this.actSvc.getById(this.actNbr).subscribe({
