@@ -31,6 +31,7 @@ import { UserDetailComponent } from './users/user-detail/user-detail.component';
 import { AnswerCreateComponent } from './answers/answer-create/answer-create.component';
 import { ActivityTypeEditComponent } from './activities/activity-type-edit/activity-type-edit.component';
 import { BoolPipePipe } from './bool-pipe.pipe';
+import { HeaderComponent } from './misc/header/header.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { BoolPipePipe } from './bool-pipe.pipe';
     AnswerCreateComponent,
     ActivityTypeEditComponent,
     BoolPipePipe,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

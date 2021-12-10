@@ -1,0 +1,21 @@
+div {
+    width: 100%;
+    margin: 0px;
+    height: 160px;
+    padding: 10px;
+    background-color: #CF6826;
+}
+
+#title {
+    font-style:italic;
+    color: #ECD78F;
+    display: inline-block;
+}
+
+#staff {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    margin: 0px 50px;
+    padding: 0px;
+}
