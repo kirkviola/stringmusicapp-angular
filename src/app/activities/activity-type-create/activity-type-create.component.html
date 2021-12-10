@@ -1,11 +1,14 @@
 <app-menu></app-menu>
 <a routerLink="/activities">Go back</a>
-<table>
-    <tr>
-        <td>Name:</td>
-        <td>
-            <input type="text" size=30 [(ngModel)]="type.name">
-        </td>
-    </tr>
-</table>
-<button class="btn btn-primary" (click)="save()">Create</button>
+<div>
+
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" size=30 [(ngModel)]="type.name">
+            </td>
+        </tr>
+    </table>
+    <button class="btn btn-primary" (click)="save()">Create</button>
+</div>

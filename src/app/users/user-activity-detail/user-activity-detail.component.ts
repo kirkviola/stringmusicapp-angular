@@ -15,6 +15,11 @@ export class UserActivityDetailComponent implements OnInit {
   actNbr: number = 0;
   constructor(private sysSvc: SystemService,private  actSvc: ActivitiesService,private route: ActivatedRoute) { }
 
+  checkCorrect(): void {
+    for (let prob of this.activity.problems){
+        prob.styleType = (prob.pointsEarned === 0) ? "wrong" : "normal";
+    }
+  }
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
     this.actNbr = +this.route.snapshot.params['id'];
@@ -22,6 +27,7 @@ export class UserActivityDetailComponent implements OnInit {
       next: res => {
         this.activity = res;
         console.debug(res, "activity found");
+        this.checkCorrect();
       }, error: err => { console.error(err);}
     });
   }

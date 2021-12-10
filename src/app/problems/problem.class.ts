@@ -9,6 +9,8 @@ export class Problem {
     photoPath: string;
     activityType: string;
 
+    styleType!: string;
+
 
     constructor() {
         this.id = 0;

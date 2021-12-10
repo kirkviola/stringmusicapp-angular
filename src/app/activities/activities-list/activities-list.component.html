@@ -18,7 +18,7 @@
 </div>
 <div>
     <h2>All Activities</h2>
-    <table class="table table-bordered">
+    <table class="table">
         <tr>
             <th>Id</th>
             <th>Title</th>
@@ -34,7 +34,7 @@
             <td>{{activity.userId}}</td>
             <td>{{activity.isComplete | boolPipe}}</td>
             <td><button (click)="delete(activity.id)">Remove</button>
-                <button (click)="reset(activity)">Reset</button>
+                <button  (click)="reset(activity)">Reset</button>
             </td>
         </tr>
     </table>
