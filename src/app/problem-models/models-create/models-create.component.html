@@ -1,2 +1,48 @@
 <app-menu></app-menu>
-<p>models-create works!</p>
+<div>
+    <span>Create a new model | </span>
+    <a routerLink="/problemmodels">Go back</a>
+</div>
+<div>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" size="30" [(ngModel)]="model.name">
+            </td>
+        </tr>
+        <tr>
+            <td>Correct Answer:</td>
+            <td>
+                <input type="text" size="30" [(ngModel)]="model.correctAnswer">
+            </td>
+        </tr>
+        <tr>
+            <td>Question Text:</td>
+            <td>
+                <input type="text" size="50" [(ngModel)]="model.questionText">
+            </td>
+        </tr>
+        <tr>
+            <td>Points Possible:</td>
+            <td>
+                <input type="number" min="1" max="100" [(ngModel)]="model.pointsPossible">
+            </td>
+        </tr>
+        <tr>
+            <td>Photo Path:</td>
+            <td>
+                <input type="text" size="50" [(ngModel)]="model.photoPath">
+            </td>
+        </tr>
+        <tr>
+            <td>Activity Type:</td>
+            <td>
+                <select [(ngModel)]="model.activityTypeId">
+                    <option *ngFor="let activity of activities" value="{{activity.id}}">{{activity.name}}</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button (click)="save()" class="btn btn-success">Create</button>
+</div>

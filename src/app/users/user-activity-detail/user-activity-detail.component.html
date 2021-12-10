@@ -6,14 +6,14 @@
     <tr>
         <th>Question</th>
         <th>Your Answer</th>
-        <th>Question</th>
+        <th>Correct Answer</th>
     </tr>
     <tr *ngFor="let problem of activity.problems">
         <td>
             {{problem.questionText}}
             <img src="{{problem.photoPath}}" alt="">
         </td>
-        <td [(ngClass)]="problem.styleType">{{problem.selectedAnswer}}</td>
-        <td>{{problem.correctAnswer}}</td>
+        <td [ngClass]="problem.styleType">{{problem.selectedAnswer}}</td>
+        <td [ngClass]="ansColor">{{problem.correctAnswer}}</td>
     </tr>
 </table>

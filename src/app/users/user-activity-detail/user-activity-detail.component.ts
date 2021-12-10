@@ -13,6 +13,8 @@ export class UserActivityDetailComponent implements OnInit {
 
   activity: Activity = new Activity();
   actNbr: number = 0;
+  ansColor: string = 'green';
+  
   constructor(private sysSvc: SystemService,private  actSvc: ActivitiesService,private route: ActivatedRoute) { }
 
   checkCorrect(): void {

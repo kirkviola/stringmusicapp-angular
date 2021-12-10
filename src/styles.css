@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 .wrong {
     color: red;
+    font-weight: bold;
 }
 
 .normal {
     font-weight: bold;
+}
+
+.green {
+    font-weight: bold;
+    color: #76EE58;
 }

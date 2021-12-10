@@ -7,6 +7,7 @@ export class ProblemModel {
     questionText: string;
     pointsPossible: number;
     photoPath: string;
+    activityTypeId: number;
     activityType!: ActivityType;
 
     constructor() {
@@ -16,5 +17,6 @@ export class ProblemModel {
         this.questionText = "";
         this.pointsPossible = 0;
         this.photoPath = "";
+        this.activityTypeId = 0;
     }
 }
