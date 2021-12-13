@@ -9,7 +9,7 @@ import { Activity } from './activity.class';
 })
 export class ActivitiesService {
 
-  baseurl: string = "http://localhost:5127/api/activities";
+  baseurl: string = `${this.sysSvc.baseurl}/api/activities`;
   constructor(private httpSvc: HttpClient, private sysSvc: SystemService) { }
 
   list(): Observable<Activity[]>{

@@ -1,15 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { SystemService } from '../system.service';
 import { ActivityType } from './activity-type.class';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ActivityTypesService {
-  baseurl: string = "http://localhost:5127/api/activitytypes";
+  baseurl: string = `${this.sysSvc.baseurl}/api/activitytypes`;
 
-  constructor(private httpSvc: HttpClient) { }
+  constructor(private httpSvc: HttpClient,
+              private sysSvc: SystemService) { }
 
   list(): Observable<ActivityType[]> {
     return this.httpSvc.get(this.baseurl) as Observable<ActivityType[]>;

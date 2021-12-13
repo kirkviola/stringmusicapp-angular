@@ -43,9 +43,17 @@ export class UserCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.sysSvc.user.isAdmin){
-      this.admin = true;
+    if (this.sysSvc.user === undefined ||
+        this.sysSvc.user === null){
+          return;
+        }
+          else if (this.sysSvc.user.isAdmin){
+            this.admin = true;
+
+          }
+          else {
+            return;
+          }
     }
   }
 
-}

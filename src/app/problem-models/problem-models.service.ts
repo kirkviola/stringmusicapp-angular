@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { SystemService } from '../system.service';
 import { ProblemModel } from './problem-models.class';
 
 @Injectable({
@@ -8,8 +9,9 @@ import { ProblemModel } from './problem-models.class';
 })
 export class ProblemModelsService {
 
-  baseurl: string = "http://localhost:5127/api/problemmodels";
-  constructor(private httpSvc: HttpClient) { }
+  baseurl: string = `${this.sysSvc.baseurl}/api/problemmodels`;
+  constructor(private httpSvc: HttpClient,
+              private sysSvc: SystemService) { }
 
   list(): Observable<ProblemModel[]> {
     return this.httpSvc.get(this.baseurl) as Observable<ProblemModel[]>;
