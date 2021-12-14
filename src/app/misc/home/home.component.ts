@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   constructor(private sysSvc: SystemService) { }
 
   ngOnInit(): void {
-    this.sysSvc.isLoggedIn();
   }
 
 }

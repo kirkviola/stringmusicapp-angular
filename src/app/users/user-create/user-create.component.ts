@@ -37,6 +37,7 @@ export class UserCreateComponent implements OnInit {
     this.userSvc.create(this.user).subscribe({
       next: res => {
         console.debug(res, "user created!");
+        this.sysSvc.user = res;
         this.router.navigate(["/home"]);
       }, error: err => { console.error(err);}
     });
