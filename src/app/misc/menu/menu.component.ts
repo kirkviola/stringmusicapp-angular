@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
     new Menu("Users", "/users"),
     new Menu("Activities", "/activities"),
     new Menu("Answers", "/answers"),
-    new Menu("My Account", `/users/edit/${this.sysSvc.user.id}`),
+    new Menu("My Account", `/users/edit`),
     new Menu("My Activities", "/users/myuser/"),
     new Menu("Problem Models", "/problemmodels"),
     new Menu("Login", "/users/login")
@@ -25,20 +25,20 @@ export class MenuComponent implements OnInit {
 
   userMenu: Menu[] = [
     new Menu("Home", "/home"),
-    new Menu("My Account", `/users/edit/${this.sysSvc.user.id}`),
+    new Menu("My Account", `/users/edit/`),
     new Menu("My Activities", "/users/myuser"),
     new Menu("Login", "/users/login")
   ];
+
+  defaultMenu: Menu[] = [
+    new Menu("Home", "/home"),
+
+  ]
 
   
   constructor(private sysSvc: SystemService) { }
 
   ngOnInit(): void {
-    if(this.sysSvc.user.isAdmin){
-      this.menus = this.adminMenu;
-    } else {
-      this.menus = this.userMenu;
-    }
   }
 
 }
