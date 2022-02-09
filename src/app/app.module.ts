@@ -33,6 +33,7 @@ import { ActivityTypeEditComponent } from './activities/activity-type-edit/activ
 import { BoolPipePipe } from './bool-pipe.pipe';
 import { HeaderComponent } from './misc/header/header.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +64,7 @@ import { HeaderComponent } from './misc/header/header.component';
     ActivityTypeEditComponent,
     BoolPipePipe,
     HeaderComponent,
+
   ],
   imports: [
     BrowserModule,

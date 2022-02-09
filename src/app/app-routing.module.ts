@@ -16,6 +16,7 @@ import { ModelsEditComponent } from './problem-models/models-edit/models-edit.co
 import { ModelsListComponent } from './problem-models/models-list/models-list.component';
 import { ProblemComponent } from './problems/problem/problem.component';
 import { MyUserComponent } from './users/my-user/my-user.component';
+import { StudentListComponent } from './users/student-list/student-list.component';
 import { UserActivityDetailComponent } from './users/user-activity-detail/user-activity-detail.component';
 import { UserCreateComponent } from './users/user-create/user-create.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: "users/myuser", component: MyUserComponent},
   {path: "users/activity/:id", component: UserActivityDetailComponent},
   {path: "users/edit/:id", component: UserEditComponent},
+  {path: "users/students/:id", component: StudentListComponent},
 
   {path: "activities", component: ActivitiesListComponent},
   {path: "activities/create", component: ActivitiesCreateComponent},
