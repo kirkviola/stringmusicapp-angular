@@ -32,6 +32,7 @@ import { AnswerCreateComponent } from './answers/answer-create/answer-create.com
 import { ActivityTypeEditComponent } from './activities/activity-type-edit/activity-type-edit.component';
 import { BoolPipePipe } from './bool-pipe.pipe';
 import { HeaderComponent } from './misc/header/header.component';
+import { StudentListComponent } from './users/student-list/student-list.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { HeaderComponent } from './misc/header/header.component';
     ActivityTypeEditComponent,
     BoolPipePipe,
     HeaderComponent,
+    StudentListComponent
 
   ],
   imports: [

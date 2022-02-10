@@ -28,6 +28,9 @@ export class UsersService {
     return this.httpSvc.get(`${this.baseurl}/${username}/${password}`) as Observable<User>;
   }
 
+  getTeacher(username: string): Observable<User>{
+    return this.httpSvc.get(`${this.baseurl}/teacher/${username}`) as Observable<User>;
+  }
   getStudents(id: number): Observable<User[]>{
     return this.httpSvc.get(`${this.baseurl}/students/${id}`) as Observable<User[]>;
   }

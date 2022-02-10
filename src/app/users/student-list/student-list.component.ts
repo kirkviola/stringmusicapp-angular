@@ -13,6 +13,7 @@ export class StudentListComponent implements OnInit {
 
   userNbr: number | undefined;
   students: User[] = [];
+  teacher!: User;
 
   constructor(private userSvc: UsersService,
               private route: ActivatedRoute,
@@ -20,6 +21,8 @@ export class StudentListComponent implements OnInit {
 
   ngOnInit(): void {
     this.userNbr = +this.route.snapshot.params["id"];
+
+    this.teacher = this.sysSvc.user;
 
     this.userSvc.getStudents(this.userNbr).subscribe({
       next: res => {

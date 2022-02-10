@@ -39,6 +39,7 @@ export class MenuComponent implements OnInit {
   constructor(private sysSvc: SystemService) { }
 
   ngOnInit(): void {
+    this.menus = this.defaultMenu;
   }
 
 }
