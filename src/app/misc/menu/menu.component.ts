@@ -32,14 +32,23 @@ export class MenuComponent implements OnInit {
 
   defaultMenu: Menu[] = [
     new Menu("Home", "/home"),
-
+    new Menu("Login", "/users/login")
   ]
 
   
   constructor(private sysSvc: SystemService) { }
 
   ngOnInit(): void {
-    this.menus = this.defaultMenu;
+    if (this.sysSvc.user === null ||
+        this.sysSvc.user === undefined){
+          this.menus = this.defaultMenu;
+        }
+    else if (this.sysSvc.user.isAdmin){
+      this.menus = this.adminMenu;
+    }
+    else if (!this.sysSvc.user.isTeacher){
+      this.menus = this.userMenu;
+    }
   }
 
 }
