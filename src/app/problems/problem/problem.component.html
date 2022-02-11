@@ -1,15 +1,25 @@
 <app-menu></app-menu>
-<h1>Question</h1>
-<h3>**Make sure NOT to click submit until ALL questions have been answered!</h3>
+<div style="text-align:center">
+    <h2>Question {{idx + 1}} of {{activity.problems.length}}</h2>
+    <h3>**Make sure NOT to click submit until ALL questions have been answered!</h3>
 
-<p>{{activity.problems[idx].questionText}}</p>
-<img src="{{activity.problems[idx].photoPath}}" alt="">
-<table><tr *ngFor="let answer of answers" >
-    <td><input type="radio" [(ngModel)]="activity.problems[idx].selectedAnswer" value="{{answer.selection}}" name="problem">
-    <label>{{answer.selection}}</label></td>
-</tr>
-</table>
-<button *ngIf="back" (click)="previous()" class="btn btn-primary">Back</button>
-<button *ngIf="forward" (click)="next()" class="btn btn-primary">Next</button>
-<button (click)="initialSubmit()" class="btn btn-success">Submit</button>
-<button *ngIf="initSubmit" (click)="finalSubmit()" class="btn btn-success">Confirm Submit</button>
+</div>
+
+<!-- Turn this into a bootstrap form -->
+<div class="card">
+    <div class="card-body">
+        <p>{{activity.problems[idx].questionText}}</p>
+
+        <img src="{{activity.problems[idx].photoPath}}" alt="">
+        <table><tr *ngFor="let answer of answers" >
+            <td><input type="radio" [(ngModel)]="activity.problems[idx].selectedAnswer" value="{{answer.selection}}" name="problem">
+            <label>{{answer.selection}}</label></td>
+        </tr>
+        </table>
+        <button *ngIf="back" (click)="previous()" class="btn btn-primary">Back</button>
+        <button *ngIf="forward" (click)="next()" class="btn btn-primary">Next</button>
+        <button (click)="initialSubmit()" class="btn btn-success">Submit</button>
+        <button *ngIf="initSubmit" (click)="finalSubmit()" class="btn btn-success">Confirm Submit</button>
+
+    </div>
+</div>

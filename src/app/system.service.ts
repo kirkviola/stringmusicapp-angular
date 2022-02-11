@@ -14,7 +14,7 @@ export class SystemService {
 
   isLoggedIn(): boolean {
     if(this.user === null || this.user === undefined){
-      this.router.navigate(['/users/login']);
+      this.router.navigate(['/home']);
       return false;
     }
     else{
