@@ -8,22 +8,19 @@
 <!-- Turn this into a bootstrap form -->
 <div class="container">
     <form>
-    
-        <div class="form-check ">
-                    <p>{{activity.problems[idx].questionText}}</p>
-            
-                    <img src="{{activity.problems[idx].photoPath}}" alt="">
-                    <div class="form-check" tr *ngFor="let answer of answers">
-                        <input type="radio" class="form-input-check" [(ngModel)]="activity.problems[idx].selectedAnswer" 
-                                value="{{answer.selection}}" name="{{answer.selection}}">
-                        <label class="form-check-label" for="{{answer.selection}}">{{answer.selection}}</label>
-    
-                    </div>
+            <p>{{activity.problems[idx].questionText}}</p>
+            <img src="{{activity.problems[idx].photoPath}}" alt="">
+            <div class="form-check" *ngFor="let answer of answers">
+                <input type="radio" class="form-input-check" [(ngModel)]="activity.problems[idx].selectedAnswer" 
+                                    value="{{answer.selection}}" name="{{answer.selection}}"
+                                    id="{{answer.selection}}">
+                <label class="form-check-label" for="{{answer.selection}}">{{answer.selection}}</label>
+        
+            </div>
                     <button *ngIf="back" (click)="previous()" class="btn btn-primary">Back</button>
                     <button *ngIf="forward" (click)="next()" class="btn btn-primary">Next</button>
                     <button (click)="initialSubmit()" class="btn btn-success">Submit</button>
                     <button *ngIf="initSubmit" (click)="finalSubmit()" class="btn btn-success">Confirm Submit</button>
-                </div>
     </form>
 
 </div>
