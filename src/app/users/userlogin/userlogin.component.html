@@ -1,16 +1,23 @@
-<div id="login">
-    <h1>String Music App Login</h1>
-    <span>User Name: </span>
-    <input [(ngModel)]="this.username" type="text" size="30">
-    <p></p>
-    <span>Password:  </span>
-    <input [(ngModel)]="this.password" type="password" size="30">
-    <p></p>
-    <button (click)="login()" class="btn btn-success">Login</button>
+<a routerLink="/home" style="margin-left: 5px">Return to home page</a>
+<div id="login" class="card">
+    <div class="card-body">
+        <h1 class="card-title">String Music App Login</h1>
+        <br>
+        <span class="card-text">User Name: </span>
+        <input [(ngModel)]="this.username" type="text" size="25">
+        <p></p>
+        <span class="card-text">Password:  </span>
+        <input [(ngModel)]="this.password" type="password" size="25">
+        <p></p>
+        <button (click)="login()" class="btn btn-success">Login</button>
+        <br><br>
+        <label id="error" *ngIf="error">Invalid user name/password combination</label>
+        <br><br>
+        <div id="create">
+            <label >Don't have an account? Create one &nbsp;</label>
+            <a routerLink="/users/create">here</a>
+        </div>
+
+    </div>
 </div>
 
-<label id="error" *ngIf="error">Invalid user name/password combination</label>
-<div id="create">
-    <label >Don't have an account? Create one &nbsp;</label>
-    <a routerLink="/users/create">here</a>
-</div>

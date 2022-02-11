@@ -50,6 +50,7 @@ export class UserCreateComponent implements OnInit {
         }
           else if (this.sysSvc.user.isAdmin){
             this.admin = true;
+            return;
           }
           else {
             return;
