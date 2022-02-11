@@ -1,26 +1,11 @@
 
-
-button {
-    margin: 5 px;
-}
-
 #login {
 
-    margin-top: 200px;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom: 5px;
-    padding: 10px;
-    border: solid black;
-    vertical-align: center;
-    text-align: center;
-    
+    width: 40rem;
+    text-align: center;    
 }
-#error {
-    margin-left: 300px;
-}
-
-#create {
-    float: right;
-    margin-right: 300px;
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-top: 10px;
 }

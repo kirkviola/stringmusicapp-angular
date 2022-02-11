@@ -8,7 +8,7 @@ import { User } from './users/user.class';
 export class SystemService {
 
   user!: User;
-  baseurl: string = "http://mattkcom.w29.wh-2.com/StringDb";
+  baseurl: string = "http://localhost:5127";
 
   constructor(private router: Router) { }
 

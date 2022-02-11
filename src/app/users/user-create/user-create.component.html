@@ -1,63 +1,65 @@
 
 <div>
-    <span>Create User</span>
+    <span>Create an Account</span>
     <span> | </span>
     <a routerLink="/users/login">Go Back</a>
 </div>
-<table>
-    <tr>
-        <td>Id</td>
-        <td>
-            <input type="text" size="10" value=0 disabled>
-        </td>
-    </tr>
-    <tr>
-        <td>Username</td>
-        <td>
-            <input type="text" size="20" [(ngModel)]="user.username">
-        </td>
 
-    </tr>
-    <tr>
-        <td>Password</td>
-        <td>
-            <input type="text" size="20" [(ngModel)]="user.password">
-        </td>
-        <td>
-            <input id="pass2" type="text" size="20" [(ngModel)]="pass">
-        </td>
+<div class="container">
+    <form name="userCreateForm">
+        <div *ngIf="admin" class="mb-3">
+            <label for="id">Id</label>
+            <input type="text" name="id" class="form-control" placeholder="id"
+                    size="10" value="0" disabled>
+        </div>
 
-    </tr>
-    <tr>
-        <td>First Name</td>
-        <td>
-            <input type="text" size="20" [(ngModel)]="user.firstname" >
-        </td>
+        <div class="mb-3">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control"
+                    size="20" [(ngModel)]="user.username" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="password">Password</label>
+            <input type="text" id="password" class="form-control"
+                    size="20" [(ngModel)]="user.password" name="password">
+            <label for="password2">Re-enter password</label>
+            <input type="text" id="password2" class="form-control"
+                    size="20" [(ngModel)]="pass" name="pass">
+        </div>
+        <div class="mb-3">
+            <label for="firstame">First Name</label>
+            <input type="text" id="firstName" class="form-control"
+                    size="20" [(ngModel)]="user.firstname" name="firstname">
+        </div>
+        <div class="mb-3">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" class="form-control"
+                    size="20" [(ngModel)]="user.lastname" name="lastname">
+        </div>
+        <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="text" id="email" class="form-control"
+                    size="20" [(ngModel)]="user.email" name="email">
+        </div>
+        <div class="mb-3 form-check">
+            <label class="form-check-label" for="isTeacher" >
+                Are you a teacher?
+            </label>
+            <input type="checkbox" class="form-check-input"
+                    name="isTeacher" id="isTeacher" [(ngModel)]="user.isTeacher">
+        </div>
+        <div *ngIf="admin" class="mb-3 form-check">
+            <label class="form-check-label" for="isAdmin">
+                Are you a system admin?
+            </label>
+            <input type="checkbox" class="form-check-input"
+                    name="isAdmin" id="isAdmin" [(ngModel)]="user.isAdmin">
+        </div>
+        <button (click)="create()" class="btn btn-primary">Create</button>
+        <br>
+        <label *ngIf="badPass">Passwords do not match!</label>
+        <label *ngIf="missing">Missing required fields!</label>
+     </form>
 
-    </tr>
-    <tr>
-        <td>Last Name</td>
-        <td>
-            <input type="text" size="20" [(ngModel)]="user.lastname">
-        </td>
-
-    </tr>
-    <tr>
-        <td>Email</td>
-        <td>
-            <input type="text" size="30" [(ngModel)]="user.email">
-        </td>
-
-    </tr>
-    <tr>
-        <td *ngIf="admin">Admin</td>
-        <td>
-            <input *ngIf="admin" type="checkbox" [(ngModel)]="user.isAdmin">
-        </td>
-
-    </tr>
-    
-</table>
-<button (click)="create()" class="btn btn-primary">Create</button>
-<label *ngIf="badPass">Passwords do not match!</label>
-<label *ngIf="missing">Missing required fields!</label>
+</div>
+        

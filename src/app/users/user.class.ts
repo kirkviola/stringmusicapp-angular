@@ -7,6 +7,8 @@ export class User {
     firstname: string;
     lastname: string;
     email: string;
+    teacherName: string;
+    isTeacher: boolean;
     isAdmin: boolean;
 
     activities!: Activity[];
@@ -18,6 +20,8 @@ export class User {
         this.firstname = "";
         this.lastname = "";
         this.email = "";
+        this.teacherName = "";
+        this.isTeacher = false;
         this.isAdmin = false;
     }
 }

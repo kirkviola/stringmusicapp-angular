@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<div class="card">
+    <div class="card-body">
+        <h2>Students for: {{ teacher.firstname }}</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Assessments</th>
+                </tr>
+            </thead>
+            <tbody class="table table-striped">
+                <tr *ngFor="let student of students">
+                    <td>{{student.firstname}} {{student.lastname}}</td>
+                    <td>{{student.username}}</td>
+                    <td><a href="">Assessments</a></td> <!-- add this component -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
