@@ -28,6 +28,7 @@ export class UserEditComponent implements OnInit {
   ngOnInit(): void {
     this.sysSvc.isLoggedIn();
     this.sysSvc.isAdmin();
+    this.isAdmin = this.sysSvc.user.isAdmin;
 
     this.userNbr = +this.route.snapshot.params['id'];
     this.userSvc.getById(this.userNbr).subscribe({

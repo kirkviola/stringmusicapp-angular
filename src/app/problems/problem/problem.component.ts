@@ -15,7 +15,7 @@ import { ProblemsService } from '../problems.service';
 })
 export class ProblemComponent implements OnInit {
 
-  activity: Activity = new Activity();
+  activity!: Activity;
   actNbr: number = 0;
   answers: Answer[] = [];
   back: boolean = false;

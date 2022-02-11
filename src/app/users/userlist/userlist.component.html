@@ -1,20 +1,27 @@
 <app-menu></app-menu>
-<h1>Users</h1>
+<h1 style="text-align: center">Users</h1>
 <table class="table table-bordered">
-    <tr>
-        <th>Id</th>
-        <th>Username</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Adm</th>
-        <th>Actions</th>
-    </tr>
-    <tr  *ngFor="let u of users">
-        <td>{{u.id}}</td>
-        <td>{{u.username}}</td>
-        <td>{{u.firstname}} {{u.lastname}}</td>
-        <td>{{u.email}}</td>
-        <td>{{u.isAdmin | boolPipe}}</td>
-        <td><a >details</a> | <a routerLink="/users/edit/{{u.id}}">edit</a></td>
-    </tr>
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Teacher</th>
+            <th scope="col">Adm</th>
+            <th scope="col">Actions</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr  *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.firstname}} {{u.lastname}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.isTeacher | boolPipe}}</td>
+            <td>{{u.isAdmin | boolPipe}}</td>
+            <td><a >details</a> | <a routerLink="/users/edit/{{u.id}}">edit</a></td>
+        </tr>
+    </tbody>
 </table>
