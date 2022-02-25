@@ -7,7 +7,7 @@ export class User {
     firstname: string;
     lastname: string;
     email: string;
-    teacherName: string;
+    teacherId: number;
     isTeacher: boolean;
     isAdmin: boolean;
 
@@ -20,7 +20,7 @@ export class User {
         this.firstname = "";
         this.lastname = "";
         this.email = "";
-        this.teacherName = "";
+        this.teacherId = 0;
         this.isTeacher = false;
         this.isAdmin = false;
     }
