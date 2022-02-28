@@ -41,13 +41,34 @@
             <input type="text" id="email" class="form-control"
                     size="20" [(ngModel)]="user.email" name="email">
         </div>
-        <div class="mb-3 form-check">
-            <label class="form-check-label" for="isTeacher" >
-                Are you a teacher?
-            </label>
-            <input type="checkbox" class="form-check-input"
-                    name="isTeacher" id="isTeacher" [(ngModel)]="user.isTeacher">
+        <div class="mb-3">
+          <label for="teacherStudent">
+            Are you a teacher or a student?
+          </label>
         </div>
+        <div class="mb-3 form-check">
+            <input type="radio" class="form-check-input"
+            name="isTeacher" id="isTeacher" [(ngModel)]="user.isTeacher"
+            value="true">
+            <label class="form-check-label" for="isTeacher" >
+                Teacher
+            </label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="radio" class="form-check-input"
+            name="isTeacher" id="isTeacher" [(ngModel)]="user.isTeacher"
+            value="false">
+            <label class="form-check-label" for="isTeacher" >
+                Student
+            </label>
+        </div>
+        <select name="teacherId" id="teacherId" *ngIf="student"
+            class="form-select">
+            <option selected>Select your teacher</option>
+            <option *ngFor="let teacher of teachers" value="{{teacher.id}}"
+                    [(ngModel)]="user.teacherId">{{teacher.firstname}} {{teacher.lastname}}</option>
+
+        </select>
         <div *ngIf="admin" class="mb-3 form-check">
             <label class="form-check-label" for="isAdmin">
                 Are you a system admin?
@@ -62,4 +83,3 @@
      </form>
 
 </div>
-        
